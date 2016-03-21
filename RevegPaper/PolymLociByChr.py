@@ -1,7 +1,25 @@
 ## Calculate percentage polymorphic loci by chromosome, for 11 chromosomes (based on Eucalypt genome) from population allele frequencies ##
+#
+#  Copyright 2016 Rebecca Jordan
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#####
 # Input: individual population .frq files (vcftools output) ** N.B. assumes chromsome names in .frq are "scaffold_1" etc
 # Output: PolymLociByChr.csv file = one population per line with each line being Site, Chr Number, Total number of loci, Number monomorphic loci, Number polymorphic loci, Percentage Polymorphic Loci
 # Usage:  python PolymLociByChr.py
+#####
 
 import glob
 

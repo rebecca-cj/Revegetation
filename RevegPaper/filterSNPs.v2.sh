@@ -1,6 +1,24 @@
 ## Create a list of loci that occur in at least one population (from the list given) with a minor allele frequency (maf) greater than given value ##
+#
+#  Copyright 2016 Rebecca Jordan
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#####
 # Input = individual population .frq files (vcftools output) and text file containing population names eg. .frq file prefixes (minus .frq extension)
 # Usage = filterSNPs.sh <pop.name.file>	<number.of.pops> <maf> <output.prefix>
+#####
 
 # create a list of biallelic loci found in in >80% of individuals in all populations (loci with greater than 2 alleles excluded)
 	> $4_all.loci

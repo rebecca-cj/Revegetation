@@ -1,8 +1,26 @@
-# Calculate percentage polymorphic loci for random subset of samples (n), from x number of replicates (with replacement between replicates)
+## Calculate percentage polymorphic loci for random subset of samples (n), from x number of replicates (with replacement between replicates) ##
+#
+#  Copyright 2016 Rebecca Jordan
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#####
 # Input: "xxx.family" = text file of sample names for a single population in plink format i.e. 1st column = 'Family', 2nd column = 'sample name'
 # Input: genotypes in PED format (plink);  script input = prefix for .ped and .map files
 # Output: "output_prefix"_poly."number"n.reps = 
 # Usage: polym_resample.sh <xxx.family> <plink_file_prefix> <num_of_reps_(x)> <samples_per_rep_(n)> <output_file_prefix>
+#####
 
 pop=${1%.family}
 for num in `seq 1 $3`
